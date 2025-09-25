@@ -1,5 +1,5 @@
-# Base image with the latest Node.js (current or LTS)
-FROM node:current-slim
+# Use Node 22 LTS instead of "current"
+FROM node:22-slim
 
 # Update system packages and install required build tools
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
@@ -20,3 +20,4 @@ EXPOSE 3000
 
 # Default command (can be overridden at runtime)
 CMD ["stencil"]
+
